@@ -1,0 +1,182 @@
+$fuente-pagina: 'triqui-font';
+$color-player1: rgb(22, 190, 22);
+$color-player2: rgb(167, 26, 26);
+@font-face {
+    font-family: $fuente-pagina;
+    src: url('font/FiraCode-VariableFont_wght.ttf');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1E1E1E;
+
+    .title {
+        width: 330px;
+        margin: 0px auto;
+        margin-top: 0px;
+        height: 179px;
+        margin-top: 69px;
+        
+        h1 {
+            font-family: $fuente-pagina;
+            color: #ffffff;
+            font-size: 50px;
+        }
+
+        em {
+            display: block;
+            color: #fff;
+            font-size: 130px;
+            width: 114px;
+            margin: 0px auto;
+        }
+    }
+    #turn{
+        width: 300px;
+        margin: 0px auto;
+        display: flex;
+        border: 5px solid rgb(128, 0, 128);
+        padding: 10px;
+        margin-top: 20px;
+        justify-content: center;
+        p{
+            color: #fff;
+            margin-right: 28px;
+            font-size: 30px;
+        }
+        em{
+            position: absolute;
+            margin-left: 180px;
+            margin-top: -10px;
+        }
+        .ion-ios-circle-outline{
+            color: $color-player1;
+            font-size: 44px;
+            margin-top: -7px;
+        }
+        .ion-ios-close-empty{
+            color: $color-player2;
+            font-size: 70px;
+            margin-top: -19px;
+        }
+    }
+    .content-table {
+        display: flex;
+        flex-wrap: wrap;
+        width: 500px;
+        height: 500px;
+        margin: 0px auto;
+        margin-top: 50px;
+        .box {
+            width: calc(498px/3);
+            height: calc(498px/3);
+            padding: 10px;
+            button {              
+                display: block;
+                width: calc(430px/3);
+                height: calc(450px/3);
+                cursor: pointer;
+                background-color: transparent;
+                transition: all 300ms;
+                .ion-ios-circle-outline{
+                    color: $color-player1; 
+                    font-size: 80px;                
+                }
+                .ion-ios-close-empty{
+                    color: $color-player2;    
+                    font-size: 120px;                                
+                }
+            }
+            button:hover{
+                background-color: rgba(204, 204, 204, 0.301);
+            }
+        }
+
+        .box1 {
+            border: 1px solid #ccc;
+        }
+
+        .box2 {
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .box3 {
+            border-left: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+        }
+
+        .box4 {
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .box5 {
+            border-left: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+        }
+    }
+
+}
+
+#reset-game{
+    cursor: pointer;
+    position: fixed;
+    top: 0%;
+    display: block;
+    width: 160px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    transition: all 300ms;
+    span{
+        display: block;
+        margin-right: 10px;
+        font-family: $fuente-pagina;
+        font-size: 20px;
+        line-height: 40px;
+        transition: all 300ms;
+    }
+    em{
+        display: block;
+        font-size: 35px;
+        transition: all 300ms;
+    }
+}
+#reset-game:hover{
+    background-color: rgb(163, 33, 124);
+    span{
+        color: rgb(240, 150, 32);
+    }
+    em{
+        color: rgb(240, 150, 32);
+    }
+}
+//Responsive
+
+@media(max-width: 600px) {
+    .content-table {
+        width: 90% !important;
+        margin: 0px auto;
+        justify-content: center;
+        .box {
+            width: calc(90%/3) !important;
+            height: calc(90%/3) !important;
+            button {
+                width: calc(90%) !important;
+                height: calc(90%) !important;
+            }
+        }
+    }
+}
